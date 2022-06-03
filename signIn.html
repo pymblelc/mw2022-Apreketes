@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>URecipe</title>
+    <link rel="icon" type="image/x-icon" href="recipe.png">
+    <link rel="stylesheet" href="css/majorproject.css" />
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"
+    ></script>
+    <script
+        src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+        crossorigin="anonymous"
+    ></script>
+
+    <img id="fruitSpread" src="realFruit.png" style="position: absolute; z-index: -999;">
+
+    <h9>Please enter your login details!</h9>
+    <div id="login-form" class="form">
+        <div>UserName: <input id="username" type="text" /></div>
+        <div>Password: <input id="password" type="text" /></div>
+        <div><button id="btnSubmitSignIn">Submit</button></div>
+      </div> 
+
+    
+
+  <script src="js/majorproject.js"></script>
+
+
+
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+  </head>
+  <body>
+  
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href=Index.html>About</a>
+    <a href=SignIn.html>Sign In</a>
+    <a href="SignUp.html">Sign Up</a>
+  </div>
+  
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+  
+  <script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+     
+  </body>
+
+
+
+
+
+</html>
+

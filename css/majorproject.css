@@ -67,8 +67,8 @@ h9{
   display: block;
   color: black;
   position: absolute;
-  left: 350px;
-  font-size: 50px;
+  left: 10px;
+  font-size: 40px;
   top: 100px;
 }
 
@@ -81,7 +81,7 @@ h9{
 #login-form{
   position: absolute;
   top: 290px;
-  left: 550px;
+  left: 150px;
 }
 /* Nav bar stuff 
 .navbar {
@@ -158,6 +158,11 @@ h5   {
 .spin-wheel{
   height: 37rem;
   background-color: #FFFF8A;
+}
+
+.spin {
+  position: absolute;
+  top: 500px;
 }
 
 #lunch-btn{
@@ -358,3 +363,8 @@ body {
   text-align: right;
 }
 
+.survey {
+  position: absolute;
+  top: 00px;
+  left: 750px;
+}

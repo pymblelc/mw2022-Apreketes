@@ -55,7 +55,7 @@ function submitUser(user, userUrl, apikey) {
         console.log(response);
         if (response) {
             localStorage.setItem('user', response._id);
-            window.location.href = 'mealChoices.html';
+            window.location.href = './survey/index.html';
         }
     });
 }

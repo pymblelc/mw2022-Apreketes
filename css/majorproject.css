@@ -24,10 +24,18 @@ header {
   left: 0px;
   top: 300px;
   color: black;
+  columns: 100px 4;
+}
+
+
+#pabout0 {
+  font-weight: bolder;
+  text-decoration: underline;     
 }
 
 #pabout1 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
 
 #pabout2 {
@@ -40,6 +48,18 @@ header {
   text-decoration: underline;     
 }
 
+#pabout8 {
+  font-weight: bolder;
+  text-decoration: underline;     
+}
+
+#userInfo{
+position: absolute;
+width: 100px;
+height: 100px;
+background-color: #98FB98;
+right: 0px;
+}
 
 .nav1{
   position: absolute;
@@ -62,6 +82,12 @@ header {
   height: 50px;
   font-size: 30px;
 }
+
+.sidenav{
+  width: 400px;
+  height: 500px;
+}
+
 
 h9{
   display: block;

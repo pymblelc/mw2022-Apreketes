@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>URecipe</title>
-    <link rel="icon" type="image/x-icon" href="recipe.png">
+    <link rel="icon" type="image/x-icon" href="recipe.png" />
     <link rel="stylesheet" href="css/majorproject.css" />
-    <script src="js/majorproject.js"></script>
+
+
     <script
       src="https://code.jquery.com/jquery-3.6.0.js"
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
@@ -15,111 +16,169 @@
       integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
       crossorigin="anonymous"
     ></script>
-    <header>URecipe</header>
 
    
-   
-
-
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  body {
-    font-family: "Lato", sans-serif;
-  }
-  
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-
-  }
-  
-  .sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-  }
-  
-  .sidenav a:hover {
-    color: #f1f1f1;
-  }
-  
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-  }
-  
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
-  </style>
+    <link rel="stylesheet" href="survey/css/survey.css">
+    <!-- <script src="survey/js/survey.js" defer></script>
+-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+
   <body>
-    <h1 id="username"></h1>
-    <div class="p-container"> 
-      <p id="pabout0">What is URecipe</p>
-      <p id="pabout1">We're here for anyone in concerned about eating disorders and if you need support or wanting to recieve information. URecipe is about providing  and  meals, dedicated to your unique lifestyle, helping you recover in a safe and caring way.</p>
-      <p id="pabout2">What is an eating disorder?</p>
-      <p id="pabout3">An eating disorder is a serious mental illness characterised by disturbances to thoughts, behaviours and attitudes to food and eating.</p>
-      <p id="pabout4"> Signs of an eating disorder</p>
-      <p id="pabout5">1.Increased preoccupation with body shape, weight and appearance</p> 
-      <p id="pabout6">2.Moodiness or irritability</p> 
-      <p id="pabout7">3.Feelings of being unable to control behaviours around food</p>
-      <p id="pabout8">Contact details</p>
-      <p id="pabout9"> Click the link to visit our <a href="https://www.instagram.com/urecipe_pymble/">instagram</a> page for more content and information</p>
-     <p id="pabout10">Click the link to be redirected to <a href="https://www.instagram.com/urecipe_pymble/">kidshelpline</a> page if you believe you are in immediate danger</p>
-  
+    <header>URecipe</header>
+    <h1 id="usernameHead"></h1>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="Index.html">About</a>
+      <a id="SignInLink" href="#">Sign In</a>
+      <a id="SignUpLink" href="#">Sign Up</a>
+
     </div>
-    
-  
 
+    <img
+      id="fruitSpread"
+      src="realFruit.png"
+      style="position: absolute; z-index: -999"
+    />
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href=Index.html>About</a>
-    <a href=SignIn.html>Sign In</a>
-    <a href="SignUp.html">Sign Up</a>
-  </div>
-  
-  <img id="fruitSpread" src="realFruit.png" style="position: absolute; z-index: -999;">
+    <div id="styleNAV" class="styleNAV" width= "500px"></div>
+    <span style="font-size: 100px; cursor: pointer; color: purple" onclick="openNav()"
+      >&#9776;
+    </span>
 
-  <div id="styleNAV" class="styleNAV"></div>
-  <span style="font-size:30px;cursor:pointer;" onclick="openNav()">&#9776; </span>
-  </div>
+    <div id="Home">
+      <div class="p-container">
+        <p id="pabout0">What is URecipe</p>
+        <p id="pabout1">
+          We're here for anyone in concerned about eating disorders and if you
+          need support or wanting to recieve information. URecipe is about
+          providing and meals, dedicated to your unique lifestyle, helping you
+          recover in a safe and caring way.
+        </p>
+        <p id="pabout2">What is an eating disorder?</p>
+        <p id="pabout3">
+          An eating disorder is a serious mental illness characterised by
+          disturbances to thoughts, behaviours and attitudes to food and eating.
+        </p>
+        <p id="pabout4">Signs of an eating disorder</p>
+        <p id="pabout5">
+          1.Increased preoccupation with body shape, weight and appearance
+        </p>
+        <p id="pabout6">2.Moodiness or irritability</p>
+        <p id="pabout7">
+          3.Feelings of being unable to control behaviours around food
+        </p>
+        <p id="pabout8">Contact details</p>
+        <p id="pabout9">
+          Click the link to visit our
+          <a href="https://www.instagram.com/urecipe_pymble/">instagram</a> page
+          for more content and information
+        </p>
+        <p id="pabout10">
+          Click the link to be redirected to
+          <a href="https://www.instagram.com/urecipe_pymble/">kidshelpline</a>
+          page if you believe you are in immediate danger
+        </p>
+      </div>
+    </div>
 
-  <script>
-  function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
-  </script>
-     
+    <div id="SignIn">
+      <h9>Please enter your login details!</h9>
+      <div id="login-form" class="form">
+        <div>UserName: <input id="usernameSignIn" type="text" /></div>
+        <div>Password: <input id="password" type="password" /></div>
+        <div><button id="btnSubmitSignIn">Submit</button></div>
+      </div>
 
+      <div class="tooltip">
+        ?
+        <span class="tooltiptext"
+          >Enter your user details, created from the SignUp page to access your
+          portal</span
+        >
+      </div>
+    </div>
 
+    <div id="SignUp">
+      <h9>Please enter your details to Sign Up</h9>
 
-     
+      <div class="tooltip">
+        ?
+        <span class="tooltiptext"
+          >Create a new account by entering in your personal details to access
+          your portal</span
+        >
+      </div>
+
+      <div id="login-form" class="form">
+        <div>FirstName: <input id="firstName" type="text" /></div>
+        <div>LastName: <input id="lastName" type="text" /></div>
+        <div>DOB: <input id="DOB" type="text" /></div>
+        <div>Email: <input id="email" type="text" /></div>
+        <div>UserName: <input id="usernameSignUp" type="text" /></div>
+        <div>Password: <input id="passwordSignUp" type="password" /></div>
+
+        <div><button id="btnSubmitSignUp">Submit</button></div>
+      </div>
+    </div>
+
+    <div id="survey">
+      <div class="q1">
+        <h3>Lets find out a little bit about you!</h3>
+        <ul class="option1">
+          <li><button id="veganBtn">Vegan</button></li>
+          <li><button id="vegetarianBtn">Vegetarian</button></li>
+          <li><button id="glutenBtn">Gluten Free</button></li>
+          <li><button id="noRequirementsBtn">No Requirements</button></li>
+        </ul>
+      </div>
+      <div class="q2">
+        <h3>How long have you been in recovery?</h3>
+        <ul class="option2">
+          <li><button id="JustStarted">Just Started</button></li>
+          <li><button id="month1">1 Month</button></li>
+          <li><button id="month3">3-6 months</button></li>
+          <li><button id="month6">6-12 months</button></li>
+        </ul>
+      </div>
+      <div class="q3">
+        <h3>What is your main Goal?</h3>
+        <ul class="option3">
+          <li><button id="findnewrecipes">find new recipes</button></li>
+          <li><button id="eduPurp">educational purposes</button></li>
+          <li><button id="adviceHelp">seeking advice/help</button></li>
+          <li><button id="somethingNew">trying something new</button></li>  
+        </ul>
+      </div>
+
+      <div class="end">
+        <h1>Thank You</h1>
+        <p>We will be in touch as soon as possible</p>
+      </div>
+    </div>
+
+    <div id="MealChoices">
+      <div id="userInfo">hello</div>
+      <div id="mealButtons" class="mealButtons hidden">
+        <button id="dinner-btn">dinner</button>
+        <button id="breakfast-btn">breakfast</button>
+        <button id="lunch-btn">lunch</button>
+      </div>
+
+      <div id="recipes">recipes</div>
+      <section id="3" class="spin-wheel">
+        <div id="spinner">
+          <h5>SPIN the fear food wheel!</h5>
+        </div>
+        <div id="wheeliframe" class="wheelspinner">
+          <iframe src="wheel/index.htm" width="100%" height="100%"></iframe>
+        </div>
+      </section>
+    </div>
+
+    <script src="js/majorproject.js"></script>
   </body>
-
-
-
-
-
 </html>

@@ -2,6 +2,10 @@ var apikey = '61a3fa6c34abfc7f972efbfd';
 var recipesUrl = 'https://apreketes-68e3.restdb.io/rest/recipes';
 var userUrl = 'https://apreketes-68e3.restdb.io/rest/accounts';
 
+document.getElementById("survey").style.display = "none";
+
+
+
 /* --- Functions --- */
 
 function getRecipes(mealType, userPreference, recipesUrl, apikey) {
@@ -53,9 +57,12 @@ function submitUser(user, userUrl, apikey) {
     $.ajax(settings).done(function (response) {
         console.log('User successfully added');
         console.log(response);
-        if (response) {
+        if (response) { //Successfully sign in
             localStorage.setItem('user', response._id);
-            window.location.href = './survey/index.html';
+            //$('#MealChoices').show();
+            $('#survey').show();
+            $('#SignUp').hide();
+           // window.location.href = './survey/index.html';
         }
     });
 }
@@ -99,11 +106,13 @@ function logUserIn(url, apikey, username, password){
     //Wait to get response from database then 
     $.ajax(settings).done(function (response) {
         console.log('response is', response);
-        if (response.length > 0) {
+        if (response.length > 0) { //credential check successfull
             //Save user for accessing later
             localStorage.setItem('user', response[0]._id);
             
-            window.location.href = 'mealChoices.html';
+            $('#MealChoices').show();
+            $('#SignIn').hide();
+            //window.location.href = 'mealChoices.html';
 
         } else {
             //TODO: DISPLAY ERROR MESSAGE SAYING 'USER DOES NOT EXIST'
@@ -133,7 +142,20 @@ $('#btnSubmitSignUp').click(function(){
     // document.getElementById("mealButtons").style.visibility = "visible";
     // document.getElementById("button").style.visibility = "hidden";
 
-    var userProfile = {firstName: $('#firstName').val(), lastName: $('#lastName').val(), DOB: $('#DOB').val(), email: $('#email').val(), username: $('#username').val(), password: $('#password').val()};
+    var userProfile = {
+      firstName: $("#firstName").val(),
+      lastName: $("#lastName").val(),
+      DOB: $("#DOB").val(),
+      email: $("#email").val(),
+      username: $("#usernameSignUp").val(),
+      password: $("#passwordSignUp").val(),
+    };
+    //$('#survey').show();
+    $('#SignUp').hide();
+    submitUser(userProfile, userUrl, apikey) 
+    console.log(userProfile);
+    return;
+
     submitUser(userProfile, userUrl, apikey);
 
     //document.getElementById("login-form").classList.add("hidden");
@@ -147,7 +169,7 @@ $('#btnSubmitSignIn').click(function(){
     // document.getElementById("mealButtons").style.visibility = "visible";
     // document.getElementById("button").style.visibility = "hidden";
 
-    var username = $('#username').val()
+    var username = $('#usernameSignIn').val()
     var password = $('#password').val()
     logUserIn(userUrl, apikey, username, password);
 
@@ -200,4 +222,121 @@ $('#back').click(function(){
 
 })
 
+/*
+$('#Home').click(function(){
+    $('#survey').show();
+
+})
+*/
+
+
+$('#SignInLink').click(function(){
+    $('#SignIn').show();
+    $('#Home').hide();
+    $('#SignUp').hide();
+    $('#MealChoices').hide();
+    $('#survey').hide();
+    closeNav();
+})
+
+
+
+
+$('#SignUpLink').click(function(){
+    $('#SignUp').show();
+    $('#Home').hide();
+    $('#MealChoices').hide();
+    $('#SignIn').hide();
+    $('#survey').hide();
+    closeNav();
+})
+
+function openNav() {
+    document.getElementById("mySidenav").style.width = "450px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+
+
+
 $("#username").text(localStorage.getItem("username"))
+
+//survey.js
+var apikey = '61a3fa6c34abfc7f972efbfd';
+var userUrl = 'https://apreketes-68e3.restdb.io/rest/accounts';
+
+const ul_1 = document.querySelector(".option1");
+const ul_2 = document.querySelector(".option2");
+const ul_3 = document.querySelector(".option3");
+
+const q1 = document.querySelector(".q1");
+const q2 = document.querySelector(".q2");
+const q3 = document.querySelector(".q3");
+
+const survey = document.querySelector(".survey");
+const end = document.querySelector(".end");
+
+function saveDietType(diet) {
+    const userID = localStorage.getItem('user');
+    var dietData = {"dietType": diet};
+    var settings = {
+    "async": true,
+    "crossDomain": true,
+    "url": `${userUrl}/${userID}`,
+    "method": "PUT",
+    "headers": {
+        "content-type": "application/json",
+        "x-apikey": apikey,
+        "cache-control": "no-cache"
+    },
+    "processData": false,
+    "data": JSON.stringify(dietData)
+    }
+
+    $.ajax(settings).done(function (response) {
+        console.log(response);
+    });
+}
+
+//First question 
+ul_1.addEventListener("click", function() {
+    q1.style.display = "none";
+    q2.style.display = "block";
+    console.log(ul_1);
+});
+
+//second question 
+ul_2.addEventListener("click", function() {
+    q2.style.display = "none";
+    q3.style.display = "block";
+    console.log(ul_2);
+});
+
+//Display Thanks Messsage
+ul_3.addEventListener('click',function() {
+    q3.style.display = "none";
+    survey.style.display = "none";
+    end.style.display = "block";
+    console.log(ul_3);
+});
+
+$('#veganBtn').click(function(){
+
+    saveDietType("vegan")
+})
+
+$('#vegetarianBtn').click(function(){
+
+    saveDietType("vegetarian")
+})
+
+$('#glutenBtn').click(function(){
+    saveDietType("Gluten Free")
+})
+
+$('#noRequirementsBtn').click(function(){
+    saveDietType("No Requirements")
+})

@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color:#FFD580;
+  background-color:#E2F0CB;
 }
 
 h1{
@@ -10,58 +10,126 @@ h1{
   position: absolute;
   left: 550px;
 }
+
+#PlantSpread{
+top: 150px;
+left: 200px;
+}
+
+#leavesSpread{
+  top: 150px;
+  left: 700px;
+  }
+
+  #mulleavesSpread{
+    top: 150px;
+    left: 1200px;
+    }
+
 header {
   display: block;
   color: aliceblue;
   position: absolute;
-  left: 550px;
+  left: 100px;
+  top: 20px;
   font-size: 100px;
-}
-
-.p-container {
-  text-align: center;
-  color: black;
-  columns: 100px 4;
 }
 
 
 #pabout0 {
   font-weight: bolder;
-  text-decoration: underline;     
+  position: absolute;
+  left: 200px;
+  top: 280px;
 }
 
 #pabout1 {
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
+  position: absolute;
+  left: 50px;
+  top: 320px;
+  text-align: center;
 }
 
-#pabout2 {
-  font-weight: bolder;
-  text-decoration: underline;     
+#pabout11 {
+  position: absolute;
+  top: 340px;
+  left: 50px;
+  text-align: center;
+}
+
+#pabout12 {
+  position: absolute;
+  top: 360px;
+  left: 50px;
+  text-align: center;
+}
+
+#pabout13 {
+  position: absolute;
+  top: 380px;
+  left: 50px;
+  text-align: center;
 }
 
 #pabout4 {
   font-weight: bolder;
-  text-decoration: underline;     
+  position: absolute;
+  left: 630px;
+  top: 280px;
+}
+
+#pabout5 {
+  position: absolute;
+  left: 550px;
+  text-align: center;
+}
+
+#pabout6 {
+  position: absolute;
+  left: 550px;
+  top: 350px;
+  text-align: center;
+}
+#pabout7 {
+  position: absolute;
+  left: 550px;
+  top: 380px;
+  text-align: center;
 }
 
 #pabout8 {
   font-weight: bolder;
-  text-decoration: underline;     
+  position: absolute;
+  left: 1200px;
+  top: 280px;
+}
+
+#pabout9 {
+  position: absolute;
+  left: 1100px;
+  top: 320px;
+}
+
+#pabout10 {
+  position: absolute;
+  left: 1100px;
+  top: 380px;
 }
 
 #userInfo{
-position: absolute;
+  position: absolute;
+  top: 40px;
+  right: 0px;
 width: 100px;
 height: 100px;
-background-color: #98FB98;
-right: 0px;
+
 }
 
 
 #Home{
   min-height:300px;
-  background-color: #98FB98;
+
   display: block;
   margin-top: 200px;
   }
@@ -118,20 +186,16 @@ h9{
   display: block;
   color: black;
   position: absolute;
-  left: 10px;
+  left: 50px;
   font-size: 40px;
-  top: 100px;
+  top: 300px;
 }
 
-#recipes{
-  color: blue;
-  font-size: 40px;
-}
 
 
 #login-form{
   position: absolute;
-  top: 290px;
+  top: 390px;
   left: 150px;
 }
 /* Nav bar stuff 
@@ -158,11 +222,11 @@ h9{
   
 }*/
 
-/* Title stuff */
+/* Title stuff 
 #fruitSpread{
-  width: 100%;
+  width: 50%;
   height: 250px
-}
+}*/
 
 
 /* Main content */
@@ -188,6 +252,7 @@ h3   {
   color: #000;
   position: absolute;
   top: 350px;
+  left: 190px;
 }
 
 .box2{
@@ -224,44 +289,72 @@ h5   {
 }
 
 #lunch-btn{
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  width: 100px;
   height: 50px;
   position: absolute;
-  left: 990px;
-  top: 200px;
+  left: 700px;
+  top: 300px;
+  cursor: pointer;
 }
 #breakfast-btn{
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  width: 100px;
   height: 50px;
   position: absolute;
-  left: 790px;
-  top: 200px;
+  left: 200px;
+  top: 300px;
+  cursor: pointer;
 }
 
+#TOUCH {
+  position: absolute;
+  left: 700px;
+  top: 270px;
+  font-size: 20px;
+}
 
+#portal{
+  position: absolute;
+  left: 690px;
+  top: 300px;
+  font-size: 45px;
+  cursor: pointer;;
+}
 
 #dinner-btn{
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  width: 100px;
   height: 50px;
   position: absolute;
-  left: 1190px;
-  top: 200px;
+  left: 1200px;
+  top: 300px;
+  cursor: pointer;
 }
 
 #btnSubmitSignUp{
   border-radius: 10px;
-  background-color: #FFFF8A;
+  background-color: #f1f1f1;
   width: 100px;
   height: 30px;
   position: absolute;
-  top: 300px;
-  left: 400px;
+  top: 140px;
+  left: 220px;
+  cursor: pointer;
+}
+
+#btnSubmitSignIn{
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  width: 100px;
+  height: 30px;
+  position: absolute;
+  top: 70px;
+  left: 200px;
+  cursor: pointer;
 }
 
 #back{
@@ -278,9 +371,19 @@ h5   {
 }
 
 .recipeName {
+  position: absolute;
+  left: 490px;
+  top: 400px;
   width: 200px;
   display: inline-block;
 }
+
+.RepLink {
+  position: absolute;
+  left: 650px;
+  top: 400px;
+}
+
 
 .recipeTimeOfDay {
   width: 100px;
@@ -432,7 +535,7 @@ body {
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
   position: absolute;
-  top: 340px;
+  top: 390px;
   left: 390px;
 }
 
@@ -535,4 +638,12 @@ body {
   size: 200px;
 }
 
+
+#SpinTitle{
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  color: #fff;
+  font-size: 50px;
+}
 

@@ -1,13 +1,11 @@
+//Key for RESTdb.io database
 var apikey = '61a3fa6c34abfc7f972efbfd';
 var recipesUrl = 'https://apreketes-68e3.restdb.io/rest/recipes';
 var userUrl = 'https://apreketes-68e3.restdb.io/rest/accounts';
 
 document.getElementById("survey").style.display = "none";
 
-
-
 /* --- Functions --- */
-
 function getRecipes(mealType, userPreference, recipesUrl, apikey) {
     var settings = {
         "async": true,
@@ -21,7 +19,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
             
         }
     }
-    
+    //
     $.ajax(settings).done(function (response) {
         for(var i=0; i<response.length; i++){
             console.log("Checking for user pref", mealType, "and", userPreference);
@@ -30,7 +28,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
             if(mealType == response[i].recipetimeofday && 
                 userPreference == response[i].diet) {
                 console.log("hello")
-                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a href=" + response[i].url + ">" + response[i].url + "</a>" + "</div>";
+                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + ">" + response[i].url + "</a>" + "</div>";
                 $("#mealButtons").append(recipeItem);
             }
 
@@ -39,6 +37,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
     });
 }
 
+//
 function submitUser(user, userUrl, apikey) {
     var settings = {
         "async": true,
@@ -59,14 +58,13 @@ function submitUser(user, userUrl, apikey) {
         console.log(response);
         if (response) { //Successfully sign in
             localStorage.setItem('user', response._id);
-            //$('#MealChoices').show();
             $('#survey').show();
             $('#SignUp').hide();
-           // window.location.href = './survey/index.html';
         }
     });
 }
 
+//RestDb user preference
 async function getUserPreference(mealType, url, apikey, username) {
     var settings = {
         "async": true,
@@ -111,8 +109,7 @@ function logUserIn(url, apikey, username, password){
             localStorage.setItem('user', response[0]._id);
             
             $('#MealChoices').show();
-            $('#SignIn').hide();
-            //window.location.href = 'mealChoices.html';
+            $('#SignIn').hide()
 
         } else {
             //TODO: DISPLAY ERROR MESSAGE SAYING 'USER DOES NOT EXIST'
@@ -120,6 +117,8 @@ function logUserIn(url, apikey, username, password){
         
     });
 }
+
+//TODO: add this back button 
 
 /*document.getElementById("back").classList.add("hidden");
 document.getElementById("recipes").classList.add("hidden");*/
@@ -134,13 +133,10 @@ document.getElementById('nav--bar').addEventListener('click', function (e) {
     }
 });
 */
-//
 
+// User makes a profile, and then the sign up hides when they press submit
 $('#btnSubmitSignUp').click(function(){
     console.log('signin up');
-    //var tempItem = {Name: $('#Name').val(),AnimalType: $('#AnimalType').val(),Description: $('#Description').val(), ImguserUrl: $('#ImguserUrl').val() };
-    // document.getElementById("mealButtons").style.visibility = "visible";
-    // document.getElementById("button").style.visibility = "hidden";
 
     var userProfile = {
       firstName: $("#firstName").val(),
@@ -150,7 +146,7 @@ $('#btnSubmitSignUp').click(function(){
       username: $("#usernameSignUp").val(),
       password: $("#passwordSignUp").val(),
     };
-    //$('#survey').show();
+
     $('#SignUp').hide();
     submitUser(userProfile, userUrl, apikey) 
     console.log(userProfile);
@@ -158,63 +154,39 @@ $('#btnSubmitSignUp').click(function(){
 
     submitUser(userProfile, userUrl, apikey);
 
-    //document.getElementById("login-form").classList.add("hidden");
-    //document.getElementById("mealButtons").classList.remove("hidden");
 })
 
+//This submit button only logs in user's if user's values are entered correctly
+//It checks if the values are correct in the database
 $('#btnSubmitSignIn').click(function(){
-    //var md5Hash = CryptoJS.MD5("Test");
-    //console.log(md5Hash)
-    //var tempItem = {Name: $('#Name').val(),AnimalType: $('#AnimalType').val(),Description: $('#Description').val(), ImguserUrl: $('#ImguserUrl').val() };
-    // document.getElementById("mealButtons").style.visibility = "visible";
-    // document.getElementById("button").style.visibility = "hidden";
-
     var username = $('#usernameSignIn').val()
     var password = $('#password').val()
     logUserIn(userUrl, apikey, username, password);
 
-    //document.getElementById("login-form").classList.add("hidden");
-    //document.getElementById("mealButtons").classList.remove("hidden");
+   
 })
 
+//When dinner button is clicked, the user's diet dinner options are showed 
 $('#dinner-btn').click(function(){
-    /*
-    document.getElementById("mealButtons").classList.add("hidden");
-    document.getElementById("recipes").classList.remove("hidden");
-    console.log('hello');
-    getRecipes(recipesUrl,apikey);
-    document.getElementById("recipes").innerHTML = 'https://www.taste.com.au/recipes/chicken-caesar-veggie-wraps/7voSwi5x?r=recipes/lunchrecipes&c=0fa1cf4f-809b-4ee7-88a0-72da8e8543a4/Lunch%20recipes';
-    document.getElementById("back").classList.remove("hidden");
-    */
-    getUserPreference("Dinner", userUrl, apikey, localStorage.getItem('user'))
+    
+    getUserPreference("dinner", userUrl, apikey, localStorage.getItem('user'))
 
 })
 
+//When breakfast button is clicked, the user's diet breakfast options are showed 
 $('#breakfast-btn').click(function(){
-    /*
-    document.getElementById("mealButtons").classList.add("hidden");
-    document.getElementById("recipes").classList.remove("hidden");
-    console.log('hello');
-    document.getElementById("recipes").innerHTML = 'https://www.cookinglight.com/recipes/avocado-toast-recipe';
-    document.getElementById("back").classList.remove("hidden");
-    */
+    
     getUserPreference("breakfast", userUrl, apikey, localStorage.getItem('user'))
 })
 
-
-
+//When Lunch button is clicked, the user's diet lunch options are showed 
 $('#lunch-btn').click(function(){
-    /*
-    document.getElementById("mealButtons").classList.add("hidden");
-    document.getElementById("recipes").classList.remove("hidden");
-    console.log('hello');
-    document.getElementById("recipes").innerHTML = 'https://www.bbcgoodfood.com/recipes/chicken-pasta-bake';
-    document.getElementById("back").classList.remove("hidden");
-    */
-    getUserPreference("Lunch", userUrl, apikey, localStorage.getItem('user'))
+   
+    getUserPreference("lunch", userUrl, apikey, localStorage.getItem('user'))
 
 })
 
+//Back button for Meal Buttons
 $('#back').click(function(){
     document.getElementById("back").classList.add("hidden");
     document.getElementById("recipes").classList.add("hidden");
@@ -222,14 +194,7 @@ $('#back').click(function(){
 
 })
 
-/*
-$('#Home').click(function(){
-    $('#survey').show();
-
-})
-*/
-
-
+//Hide and Show for Sign In page
 $('#SignInLink').click(function(){
     $('#SignIn').show();
     $('#Home').hide();
@@ -239,9 +204,7 @@ $('#SignInLink').click(function(){
     closeNav();
 })
 
-
-
-
+//Hide and Show for SignUp page  
 $('#SignUpLink').click(function(){
     $('#SignUp').show();
     $('#Home').hide();
@@ -251,6 +214,7 @@ $('#SignUpLink').click(function(){
     closeNav();
 })
 
+//Side Nav Bar 
 function openNav() {
     document.getElementById("mySidenav").style.width = "450px";
   }
@@ -261,8 +225,9 @@ function openNav() {
 
 
 
-
+//TODO: add userName at top of mealchoices 
 $("#username").text(localStorage.getItem("username"))
+
 
 //survey.js
 var apikey = '61a3fa6c34abfc7f972efbfd';
@@ -303,6 +268,7 @@ function saveDietType(diet) {
 
 //First question 
 ul_1.addEventListener("click", function() {
+    end.style.display = "none";
     q1.style.display = "none";
     q2.style.display = "block";
     console.log(ul_1);
@@ -310,6 +276,7 @@ ul_1.addEventListener("click", function() {
 
 //second question 
 ul_2.addEventListener("click", function() {
+    end.style.display = "none";
     q2.style.display = "none";
     q3.style.display = "block";
     console.log(ul_2);
@@ -318,11 +285,17 @@ ul_2.addEventListener("click", function() {
 //Display Thanks Messsage
 ul_3.addEventListener('click',function() {
     q3.style.display = "none";
-    survey.style.display = "none";
     end.style.display = "block";
     console.log(ul_3);
 });
 
+end.addEventListener('click',function() {
+    end.style.display = "none";
+    MealChoices.style.display = "block";
+    console.log(MealChoices);
+});
+
+//Diet types clicked, are saved with profile in database
 $('#veganBtn').click(function(){
 
     saveDietType("vegan")
@@ -340,3 +313,4 @@ $('#glutenBtn').click(function(){
 $('#noRequirementsBtn').click(function(){
     saveDietType("No Requirements")
 })
+

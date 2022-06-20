@@ -28,7 +28,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
             if(mealType == response[i].recipetimeofday && 
                 userPreference == response[i].diet) {
                 console.log("hello")
-                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + ">" + response[i].url + "</a>" + "</div>";
+                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\">" + response[i].url + "</a>" + "</div>";
                 $("#mealButtons").append(recipeItem);
             }
 
@@ -36,6 +36,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
         }
     });
 }
+
 
 //
 function submitUser(user, userUrl, apikey) {

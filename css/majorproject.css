@@ -6,7 +6,7 @@ body {
 
 h1{
   display: block;
-  color: aliceblue;
+  color: #185a37;
   position: absolute;
   left: 550px;
 }
@@ -26,9 +26,37 @@ left: 200px;
     left: 1200px;
     }
 
+    #REcImg{
+      top: 450px;
+      left: 150px;
+      }
+
+    #ETitle {
+      position: absolute;
+      top: 500px;
+      left: 500px;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 20px;
+    }
+    #EStory{
+    position: absolute;
+    top: 550px;
+    left: 450px;
+    text-align: center;
+    }
+
+    #EStory2{
+      position: absolute;
+      top: 570px;
+      left: 450px;
+      text-align: center;
+      }
+
+
 header {
   display: block;
-  color: aliceblue;
+  color: #185a37;
   position: absolute;
   left: 100px;
   top: 20px;
@@ -41,6 +69,7 @@ header {
   position: absolute;
   left: 200px;
   top: 280px;
+  color: #185a37;
 }
 
 #pabout1 {
@@ -49,6 +78,7 @@ header {
   left: 50px;
   top: 320px;
   text-align: center;
+  
 }
 
 #pabout11 {
@@ -77,6 +107,7 @@ header {
   position: absolute;
   left: 630px;
   top: 280px;
+  color: #185a37;
 }
 
 #pabout5 {
@@ -103,6 +134,7 @@ header {
   position: absolute;
   left: 1200px;
   top: 280px;
+  color: #185a37;
 }
 
 #pabout9 {
@@ -643,7 +675,7 @@ body {
   position: absolute;
   top: 50px;
   left: 50px;
-  color: #fff;
+  color: #185a37;
   font-size: 50px;
 }
 

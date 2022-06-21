@@ -108,7 +108,8 @@ function logUserIn(url, apikey, username, password){
         if (response.length > 0) { //credential check successfull
             //Save user for accessing later
             localStorage.setItem('user', response[0]._id);
-            
+            $("#userName").text("Username: "+response[0].username);
+            $("#dietType").text("Diet: "+response[0].dietType);
             $('#MealChoices').show();
             $('#SignIn').hide()
 
@@ -118,6 +119,9 @@ function logUserIn(url, apikey, username, password){
         
     });
 }
+
+
+
 
 //TODO: add this back button 
 

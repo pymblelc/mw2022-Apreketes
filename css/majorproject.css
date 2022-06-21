@@ -53,6 +53,23 @@ left: 200px;
       text-align: center;
       }
 
+      #profileData{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    height: 100px;
+    background-color: #98FB98;
+      }
+
+      #SIGNIN{
+        position: absolute;
+        right: 250px;
+        top: 0px;
+        width: 200px;
+        height: 100px;
+        background-color: #185a37;
+          }
 
 header {
   display: block;

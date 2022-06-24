@@ -2,7 +2,7 @@
 var apikey = '61a3fa6c34abfc7f972efbfd';
 var recipesUrl = 'https://apreketes-68e3.restdb.io/rest/recipes';
 var userUrl = 'https://apreketes-68e3.restdb.io/rest/accounts';
-
+var mediaUrl = 'https://apreketes-68e3.restdb.io/media/';
 document.getElementById("survey").style.display = "none";
 
 /* --- Functions --- */
@@ -21,21 +21,23 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
     }
     //
     $.ajax(settings).done(function (response) {
+        console.log(response);
         for(var i=0; i<response.length; i++){
             console.log("Checking for user pref", mealType, "and", userPreference);
             console.log("From db", response[i].recipetimeofday, "and", response[i].diet);
             //console.log(response[i].Name);
             if(mealType == response[i].recipetimeofday && 
                 userPreference == response[i].diet) {
-                console.log("hello")
-                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\">" + response[i].url + "</a>" + "</div>";
-                $("#mealButtons").append(recipeItem);
+                    var imgURL = mediaUrl + response[i].image[0] + "?s=t";
+                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\"> <img src='" + 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2018%2F07%2Fmain%2F1807w-avocado-toast-recipe.jpg%3Fitok%3D_dDi7ZQQ&w=800&c=sc&poi=face&q=60' + "'></a>" + "</div>";
+                $("#RecipeItems").append(recipeItem);
             }
 
            
         }
     });
 }
+
 
 
 //
@@ -112,6 +114,7 @@ function logUserIn(url, apikey, username, password){
             $("#dietType").text("Diet: "+response[0].dietType);
             $('#MealChoices').show();
             $('#SignIn').hide()
+            $('#SignInLinkTop').hide()
 
         } else {
             //TODO: DISPLAY ERROR MESSAGE SAYING 'USER DOES NOT EXIST'
@@ -201,6 +204,17 @@ $('#back').click(function(){
 
 //Hide and Show for Sign In page
 $('#SignInLink').click(function(){
+    $('#SignIn').show();
+    $('#Home').hide();
+    $('#SignUp').hide();
+    $('#MealChoices').hide();
+    $('#survey').hide();
+    closeNav();
+})
+
+
+//Hide and Show for Sign In page
+$('#SignInLinkTop').click(function(){
     $('#SignIn').show();
     $('#Home').hide();
     $('#SignUp').hide();

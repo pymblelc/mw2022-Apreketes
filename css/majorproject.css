@@ -11,6 +11,17 @@ h1{
   left: 550px;
 }
 
+.mealButtons {
+  display: flex;
+}
+
+
+.mealButton {
+width: 300px;
+height: 300px;
+text-align: center;
+}
+/*
 #PlantSpread{
 top: 150px;
 left: 200px;
@@ -25,7 +36,7 @@ left: 200px;
     top: 150px;
     left: 1200px;
     }
-
+*/
     #REcImg{
       top: 450px;
       left: 150px;
@@ -39,6 +50,7 @@ left: 200px;
       font-weight: bold;
       font-size: 20px;
     }
+    
     #EStory{
     position: absolute;
     top: 550px;
@@ -57,29 +69,42 @@ left: 200px;
     position: absolute;
     right: 0px;
     top: 0px;
-    width: 200px;
+    width: 150px;
     height: 100px;
     background-color: #98FB98;
+    border-radius: 200px;
       }
 
-      #SIGNIN{
-        position: absolute;
-        right: 250px;
-        top: 0px;
-        width: 200px;
-        height: 100px;
-        background-color: #185a37;
-          }
 
 header {
-  display: block;
+  display: inline;
   color: #185a37;
-  position: absolute;
   left: 100px;
   top: 20px;
   font-size: 100px;
+
 }
 
+#SignInLinkTop {
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+#userName{
+  position: absolute;
+  right: 45px;
+  top: 30px;
+}
+
+
+#dietType{
+  position: absolute;
+  right: 55px;
+  top: 50px;
+}
 
 #pabout0 {
   font-weight: bolder;
@@ -339,22 +364,20 @@ h5   {
 
 #lunch-btn{
   border-radius: 20px;
+  display: block;
   background-color: #f1f1f1;
   width: 100px;
   height: 50px;
-  position: absolute;
-  left: 700px;
-  top: 300px;
+  
   cursor: pointer;
 }
 #breakfast-btn{
   border-radius: 20px;
+  display: block;
   background-color: #f1f1f1;
   width: 100px;
   height: 50px;
-  position: absolute;
-  left: 200px;
-  top: 300px;
+  
   cursor: pointer;
 }
 
@@ -375,12 +398,11 @@ h5   {
 
 #dinner-btn{
   border-radius: 20px;
+  display: block;
   background-color: #f1f1f1;
   width: 100px;
   height: 50px;
-  position: absolute;
-  left: 1200px;
-  top: 300px;
+
   cursor: pointer;
 }
 
@@ -415,23 +437,21 @@ h5   {
   top: 300px;
 }
 
-#mealButtons{
-  width: hidden;
-}
 
-.recipeName {
+
+/*.recipeName {
   position: absolute;
   left: 490px;
   top: 400px;
   width: 200px;
   display: inline-block;
-}
+}*/
 
-.RepLink {
+/*.RepLink {
   position: absolute;
   left: 650px;
   top: 400px;
-}
+} */
 
 
 .recipeTimeOfDay {
@@ -579,7 +599,9 @@ body {
   left: 750px;
 }
 
-/* Tooltip container */
+
+
+ /*Tooltip container */
 .tooltip {
   display: inline-block;
   border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
@@ -588,32 +610,31 @@ body {
   left: 390px;
 }
 
-/* Tooltip text */
+  /*Tooltip text */
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
-  position: absolute;
-  top: 100px;
-  left: 100px;
   background-color: #555;
   color: #fff;
   text-align: center;
   padding: 5px 0;
   border-radius: 6px;
+  position: absolute;
+  z-index: 1;
 
-  /* Position the tooltip text */
+  /*Position the tooltip text */
   position: absolute;
   top: 50px;
   left: 50px;
 
   
 
-  /* Fade in tooltip */
+    /*Fade in tooltip */
   opacity: 0;
   transition: opacity 0.3s;
 }
 
-/* Tooltip arrow */
+ /*Tooltip arrow */
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
@@ -625,7 +646,7 @@ body {
   border-color: #555 transparent transparent transparent;
 }
 
-/* Show the tooltip text when you mouse over the tooltip container */
+  /*Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;

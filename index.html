@@ -20,21 +20,14 @@
    
     <link rel="stylesheet" href="survey/css/survey.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   </head>
 
   <body>
-    <header>URecipe</header>
-    <h1 id="usernameHead"></h1>
 
-    <div id="profileData">
-      <div id="userName"></div>
-      <div id="dietType"></div>
-    </div>
-
-    <div id="SIGNIN">
-      <a id="SignInLink" href="#">Sign In</a>
-    </div>
-
+    <span style="font-size: 100px; cursor: pointer; color: black" onclick="openNav()"
+      >&#9776;
+    </span>
     <div id="mySidenav" class="sidenav">
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
         >&times;</a>
@@ -43,32 +36,50 @@
       <a id="SignUpLink" href="#">Sign Up</a>
     </div>
 
-    <img
-    id="PlantSpread"
-    src="leaf.png"
-    style="position: absolute" width="120" height="120">
+    <header>URecipe</header>
+    <h1 id="usernameHead"></h1>
+
+    <div id="profileData">
+      <div id="userName"></div>
+      <div id="dietType"></div>
+      <a id="SignInLinkTop" href="#">Sign In</a>
+     
+      
+    </div>
+
+    <div id="mealButtons" class="mealButtons hidden">
+
+      <div id="breakfast" class="mealButton">
+          <img
+          id="PlantSpread"
+          src="leaf.png"
+          width="120" height="120">
+          
+        
+        </div>
+      
+        <div id="lunch" class="mealButton">
+          <img
+          id="leavesSpread"
+          src="leaves.png"
+       width="120" height="120">
+         
+        </div>
+        
+        <div id="dinner" class="mealButton">
+          <img
+          id="mulleavesSpread"
+          src="mulleaves.png"
+       width="120" height="120">
+      
+           </div>
+
   
-    <img
-    id="leavesSpread"
-    src="leaves.png"
-    style="position: absolute" width="120" height="120">
-  
-    <img
-    id="mulleavesSpread"
-    src="mulleaves.png"
-    style="position: absolute" width="120" height="120">
+     
+
+   
 
     
-  
-
-      
-
-
-
-    <div id="styleNAV" class="styleNAV" width= "500px"></div>
-    <span style="font-size: 100px; cursor: pointer; color: black" onclick="openNav()"
-      >&#9776;
-    </span>
 
     <div id="Home">
       <div class="p-container">
@@ -105,6 +116,7 @@
     id="REcImg"
     src="Rec.png"
     style="position: absolute" width="220" height="220">
+ 
     <p id="ETitle">
       "My 17th birthday was when I realised I had an eating disorder" </p>
       <p id="EStory">
@@ -128,7 +140,7 @@
 
     <p class="tooltiptext">
       Click 
-      <a href="https://www.instagram.com/urecipe_pymble/">HELP</a> 
+      <a href="https://pymbleladiescollege-my.sharepoint.com/:w:/g/personal/apreketes_pymblelc_nsw_edu_au/Eb3POjZDBwpOqCYIjJhcgckBQsSMb7IUY7us8HLQn4dQxg?e=oMltZ2">HELP</a> 
       for a user help guide
     </p>
     </div>
@@ -138,11 +150,16 @@
     <div id="SignUp">
       <h9>Sign Up</h9>
 
+
+      
+
       <div class="tooltip">
         ?
-      <span class="tooltiptext"
-          >Create a new account by entering in your personal details to access
-          your portal</span>
+
+      <p class="tooltiptext">
+      Click 
+      <a href="https://pymbleladiescollege-my.sharepoint.com/:w:/g/personal/apreketes_pymblelc_nsw_edu_au/EbTwPinz26dAgcUhz3ZhxuwBc4hrGOl4BjFWMU8K-IabYw">HELP</a> 
+      for a user help guide
       </div>
 
      
@@ -201,10 +218,32 @@
 
     <div id="MealChoices">
       <div id="mealButtons" class="mealButtons hidden">
-        <button id="dinner-btn">dinner</button>
-        <button id="breakfast-btn">breakfast</button>
-        <button id="lunch-btn">lunch</button>
-      </div>
+
+<div id="breakfast" class="mealButton">
+    <img
+    id="PlantSpread"
+    src="leaf.png"
+    width="120" height="120">
+    <button id="breakfast-btn">breakfast</button>
+  </div>
+
+  <div id="lunch" class="mealButton">
+    <img
+    id="leavesSpread"
+    src="leaves.png"
+ width="120" height="120">
+    <button id="lunch-btn">lunch</button>
+  </div>
+  
+  <div id="dinner" class="mealButton">
+    <img
+    id="mulleavesSpread"
+    src="mulleaves.png"
+ width="120" height="120">
+    <button id="dinner-btn">dinner</button>
+     </div>
+
+      <div id="RecipeItems"></div>
 
 
       <section id="3" class="spin-wheel">

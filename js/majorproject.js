@@ -61,8 +61,15 @@ function submitUser(user, userUrl, apikey) {
         console.log(response);
         if (response) { //Successfully sign in
             localStorage.setItem('user', response._id);
+            
+            $("#usernameSignUp").text("Username: "+response.username);
+            const usernameSignUp = $("#usernameSignUp").val();
+            $("#userName").text("Username: "+ usernameSignUp);
             $('#survey').show();
-            $('#SignUp').hide();
+            $("#SignOutLinkTop").show();
+            //$('#MealChoices').show();
+            $('#SignIn').hide()
+            $('#SignInLinkTop').hide()
         }
     });
 }
@@ -115,9 +122,13 @@ function logUserIn(url, apikey, username, password){
             $('#MealChoices').show();
             $('#SignIn').hide()
             $('#SignInLinkTop').hide()
+            $('#signInError').hide()
+            $("#SignOutLinkTop").show();
 
         } else {
             //TODO: DISPLAY ERROR MESSAGE SAYING 'USER DOES NOT EXIST'
+            $("#signInError").text("Error: Incorrect username or password");
+            $('#signInError').show()
         }
         
     });
@@ -282,6 +293,9 @@ function saveDietType(diet) {
 
     $.ajax(settings).done(function (response) {
         console.log(response);
+        $("#dietType").text("Diet: "+response.dietType);
+        $("#SignOutLinkTop").show();
+        
     });
 }
 
@@ -332,4 +346,5 @@ $('#glutenBtn').click(function(){
 $('#noRequirementsBtn').click(function(){
     saveDietType("No Requirements")
 })
+
 

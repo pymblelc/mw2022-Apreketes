@@ -65,15 +65,23 @@ left: 200px;
       text-align: center;
       }
 
-      #profileData{
-    position: absolute;
-    right: 0px;
-    top: 0px;
-    width: 150px;
-    height: 100px;
-    background-color: #98FB98;
-    border-radius: 200px;
-      }
+    #profileData{
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      width: 175px;
+      height: 100px;
+      background-color: #98FB98;
+      border-radius: 20px;
+    }
+    #signInError{
+      position: absolute;
+      top: 40px;
+      width: 500px;
+      font-size: 16px;
+      color: red;
+      display: none;
+    }
 
 
 header {
@@ -227,7 +235,7 @@ height: 100px;
         }
       
 
-
+/*
 .nav1{
   position: absolute;
   bottom: 50px;
@@ -249,7 +257,7 @@ height: 100px;
   height: 50px;
   font-size: 30px;
 }
-
+*/
 .sidenav{
   width: 400px;
   height: 500px;
@@ -265,6 +273,9 @@ h9{
   top: 300px;
 }
 
+#SignOutLinkTop {
+  display: none;
+}
 
 
 #login-form{
@@ -339,11 +350,12 @@ h5   {
   position: absolute;
   left: 30px;
   font-size: 30px;
-
-
-
- 
 }
+
+#iframe {
+  border: none;
+ }
+ 
 .main-content .login .hidden{
   display: none;
 }
@@ -353,7 +365,7 @@ h5   {
   top:500px;
   width: 1500px;
   height: 37rem;
-  background-color: #FFFF8A;
+
 }
 
 .wheelspinner {
@@ -655,6 +667,20 @@ body {
   left: 10px;
 }
 
+.signInHelp {
+  position: absolute;
+  left: 250px;
+  top: 10px;
+  width: 300px;
+}
+
+.signUpHelp {
+  position: absolute;
+  left: 250px;
+  top: 10px;
+  width: 300px;
+}
+
 body {
   font-family: "Lato", sans-serif;
 }
@@ -708,12 +734,17 @@ body {
   size: 200px;
 }
 
-
 #SpinTitle{
   position: absolute;
-  top: 50px;
+  bottom: 700px;
   left: 50px;
   color: #185a37;
   font-size: 50px;
+}
+
+#wheeliframe {
+  position: absolute;
+  right: 550px;
+  bottom: 100px;
 }
 

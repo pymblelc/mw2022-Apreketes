@@ -43,6 +43,8 @@
       <div id="userName"></div>
       <div id="dietType"></div>
       <a id="SignInLinkTop" href="#">Sign In</a>
+      <div id="dietType"></div>
+      <a id="SignOutLinkTop" href="">Sign Out</a>
      
       
     </div>
@@ -132,36 +134,46 @@
       <div id="login-form" class="form">
       <div>UserName: <input id="usernameSignIn" type="text" /></div>
       <div>Password: <input id="password" type="password" /></div>
+      <div id="signInError"></div>
       <div><button id="btnSubmitSignIn">Submit</button></div>
+      <div class="signInHelp">
+        <p>
+          Click 
+          <a id= "signInHelpLink" target="_blank" href="./User Sign Up Guide.pdf">here</a> 
+          for help to sign in
+      </div>
+    </div>
     </div>
 
+
+
+  
+    <!--
       <div class="tooltip">
         ?
 
     <p class="tooltiptext">
       Click 
-      <a href="https://pymbleladiescollege-my.sharepoint.com/:w:/g/personal/apreketes_pymblelc_nsw_edu_au/Eb3POjZDBwpOqCYIjJhcgckBQsSMb7IUY7us8HLQn4dQxg?e=oMltZ2">HELP</a> 
+      <a href="./User Sign In Guide.pdf">HELP</a> 
       for a user help guide
     </p>
     </div>
     </div>
-
+    -->
 
     <div id="SignUp">
       <h9>Sign Up</h9>
 
-
-      
-
+      <!--
       <div class="tooltip">
         ?
 
       <p class="tooltiptext">
       Click 
-      <a href="https://pymbleladiescollege-my.sharepoint.com/:w:/g/personal/apreketes_pymblelc_nsw_edu_au/EbTwPinz26dAgcUhz3ZhxuwBc4hrGOl4BjFWMU8K-IabYw">HELP</a> 
+      <a href="./User Sign Up Guide.pdf">HELP</a> 
       for a user help guide
       </div>
-
+    -->
      
 
       <div id="login-form" class="form">
@@ -173,7 +185,13 @@
         <div>Password: <input id="passwordSignUp" type="password" /></div>
 
         <div><button id="btnSubmitSignUp">Submit</button></div>
+        <div class="signUpHelp">
+          <p>
+            Click 
+            <a target="_blank" href="./User Sign Up Guide.pdf">here</a> 
+            for help to sign up
         </div>
+      </div>
     </div>
 
     <div id="survey">
@@ -247,16 +265,13 @@
 
 
       <section id="3" class="spin-wheel">
-        <div id="spinner">
-          <h5>SPIN the fear food wheel!</h5>
+        <div id="SpinTitle">
+          <h11>Activity Wheel</h11>
         </div>
         <div id="wheeliframe" class="wheelspinner">
-          <iframe src="wheel/index.htm" width="100%" height="100%"></iframe>
-    <div id="SpinTitle">
-      <h11>Activity Wheel</h11>
+          <iframe id="iframe" src="wheel/index.htm" width="100%" height="100%"></iframe>
         </div>
       </section>
-    </div>
 
     <script src="js/majorproject.js"></script>
   </body>

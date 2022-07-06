@@ -10,26 +10,27 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
     var settings = {
         "async": true,
         "crossDomain": true,
-        "url": recipesUrl,
+        "url": recipesUrl,//mediaURL doesnt work here 
         "method": "GET",
         "headers": {
             "content-type": "application/json",
             "x-apikey": apikey,
             "cache-control": "no-cache",
-            
         }
     }
     //
     $.ajax(settings).done(function (response) {
         console.log(response);
         for(var i=0; i<response.length; i++){
-            console.log("Checking for user pref", mealType, "and", userPreference);
-            console.log("From db", response[i].recipetimeofday, "and", response[i].diet);
+            //console.log("Checking for user pref", mealType, "and", userPreference);
+            //console.log("From db", response[i].recipetimeofday, "and", response[i].diet);
             //console.log(response[i].Name);
             if(mealType == response[i].recipetimeofday && 
                 userPreference == response[i].diet) {
-                    var imgURL = mediaUrl + response[i].image[0] + "?s=t";
-                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\"> <img src='" + 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimg1.cookinglight.timeinc.net%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fmedium_2x%2Fpublic%2Fimage%2F2018%2F07%2Fmain%2F1807w-avocado-toast-recipe.jpg%3Fitok%3D_dDi7ZQQ&w=800&c=sc&poi=face&q=60' + "'></a>" + "</div>";
+                var imgURL = mediaUrl + response[i].image[0] + "?s=t";
+                //need to use API key when requesting Image 
+                //currently throwing a 403 error in console
+                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\"> <img id='RECIPEID' src='recipee.png" + "'></a>" + "</div>";
                 $("#RecipeItems").append(recipeItem);
             }
 

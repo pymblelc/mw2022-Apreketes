@@ -1,12 +1,7 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 a {
   text-decoration: none;
-  color: #185a37;
+  color: #18A558;
   text-decoration: underline; 
   
 }
@@ -106,7 +101,7 @@ h3 {
   top: 320px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -120,7 +115,7 @@ h3 {
   top: 360px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -133,7 +128,7 @@ h3 {
   top: 400px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -146,7 +141,7 @@ h3 {
   top: 440px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -159,7 +154,7 @@ h3 {
   top: 320px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -172,7 +167,7 @@ h3 {
   top: 360px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -185,7 +180,7 @@ h3 {
   top: 400px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -198,7 +193,7 @@ h3 {
   top: 440px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -211,7 +206,7 @@ h3 {
   top: 320px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -224,7 +219,7 @@ h3 {
   top: 360px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -237,7 +232,7 @@ h3 {
   top: 400px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;
@@ -250,7 +245,7 @@ h3 {
   top: 440px;
   left: 700px;
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   background-repeat:no-repeat;
   border: none;
   color: black;

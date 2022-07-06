@@ -7,7 +7,6 @@ body {
 h1{
   display: block;
   color: #185a37;
-  position: absolute;
   left: 550px;
 }
 
@@ -15,304 +14,243 @@ h1{
   display: flex;
 }
 
-
 .mealButton {
 width: 300px;
 height: 300px;
 text-align: center;
 }
-/*
-#PlantSpread{
-top: 150px;
-left: 200px;
+
+#REcImg{
+  top: 450px;
+  left: 150px;
+  border-radius: 10px;
 }
 
-#leavesSpread{
-  top: 150px;
-  left: 700px;
-  }
-
-  #mulleavesSpread{
-    top: 150px;
-    left: 1200px;
-    }
-*/
-    #REcImg{
-      top: 450px;
-      left: 150px;
-      }
-
-    #ETitle {
-      position: absolute;
-      top: 500px;
-      left: 500px;
-      font-style: italic;
-      font-weight: bold;
-      font-size: 20px;
-    }
+#ETitle {       
+  top: 550px;
+  left: 450px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-block-start: 4em;
+}
     
-    #EStory{
-    position: absolute;
-    top: 550px;
-    left: 450px;
-    text-align: center;
-    }
+#EStory{      
+  top: 550px;
+  left: 450px;
+  text-align: center;
+  margin-block-start: 0em;
+}
 
-    #EStory2{
-      position: absolute;
-      top: 570px;
-      left: 450px;
-      text-align: center;
-      }
+#EStory2{    
+  top: 570px;
+  left: 450px;
+  text-align: center;
+  margin-block-start: 0em;
+}
 
-    #profileData{
-      position: absolute;
-      right: 0px;
-      top: 0px;
-      width: 175px;
-      height: 100px;
-      background-color: #98FB98;
-      border-radius: 20px;
-    }
-    #signInError{
-      position: absolute;
-      top: 40px;
-      width: 500px;
-      font-size: 16px;
-      color: red;
-      display: none;
-    }
+#profileData{          /* approved abbsolute positioning */
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 175px;
+  height: 100px;
+  border-radius: 20px;
+}
+#signInError{
+  width: 500px;
+  font-size: 16px;
+  color: red;
+  display: none;
+}
 
+.recipeName{
+  font-size: 20px;
+  position: absolute;
+  top: 250px;
+  left: 1150px;
+}
+
+#RECIPEID{
+  position: absolute;
+  top: 300px;
+  left: 1150px;
+  width: 200px;
+  height: 200px;
+}
 
 header {
   display: inline;
   color: #185a37;
-  left: 100px;
-  top: 20px;
   font-size: 100px;
-
 }
 
-#SignInLinkTop {
+#usernameSignIn{
+  border-radius: 10px;
+}
+#password{
+  border-radius: 10px;
+}
+
+#SignInLinkTop {    /* approved abbsolute positioning */
   position: absolute;
   right: 40px;
   top: 40px;
   font-weight: bolder;
   font-size: 25px;
-}
+} 
 
-#userName{
+#userName{          /* approved abbsolute positioning */
   position: absolute;
   right: 45px;
   top: 30px;
+  color: #76B947
 }
 
-
-#dietType{
+#dietType{          /* approved abbsolute positioning */
   position: absolute;
   right: 55px;
   top: 50px;
+  color: #76B947
 }
 
-#pabout0 {
-  font-weight: bolder;
-  position: absolute;
-  left: 200px;
-  top: 280px;
-  color: #185a37;
+#usernameSignIn{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#password{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-#pabout1 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  position: absolute;
-  left: 50px;
-  top: 320px;
+#firstName{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#lastName{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#DOB{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#email{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#usernameSignUp{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#passwordSignUp{
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  top: 70px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; 
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  
+  margin-block-start: -9em;
+  border-radius: 3px;
 }
 
-#pabout11 {
-  position: absolute;
-  top: 340px;
-  left: 50px;
-  text-align: center;
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-#pabout12 {
-  position: absolute;
-  top: 360px;
-  left: 50px;
-  text-align: center;
-}
-
-#pabout13 {
-  position: absolute;
-  top: 380px;
-  left: 50px;
-  text-align: center;
-}
-
-#pabout4 {
-  font-weight: bolder;
-  position: absolute;
-  left: 630px;
-  top: 280px;
-  color: #185a37;
-}
-
-#pabout5 {
-  position: absolute;
-  left: 550px;
-  text-align: center;
-}
-
-#pabout6 {
-  position: absolute;
-  left: 550px;
-  top: 350px;
-  text-align: center;
-}
-#pabout7 {
-  position: absolute;
-  left: 550px;
-  top: 380px;
-  text-align: center;
-}
-
-#pabout8 {
-  font-weight: bolder;
-  position: absolute;
-  left: 1200px;
-  top: 280px;
-  color: #185a37;
-}
-
-#pabout9 {
-  position: absolute;
-  left: 1100px;
-  top: 320px;
-}
-
-#pabout10 {
-  position: absolute;
-  left: 1100px;
-  top: 380px;
-}
-
-#userInfo{
+#userInfo{                /* approved abbsolute positioning */
   position: absolute;
   top: 40px;
   right: 0px;
-width: 100px;
-height: 100px;
-
+  width: 100px;
+  height: 100px;
 }
-
 
 #Home{
   min-height:300px;
-
   display: block;
   margin-top: 200px;
-  }
+}
 
-  #SignUp{
-    background-color: #98FB98;
-    display: none;
-    }
+#SignUp{
+  display: none;
+}
   
-  #SignIn{
-    background-color: #98FB98;
-    display: none;
-    }
+#SignIn{
+  display: none;
+}
   
-  #MealChoices{
-      display: none;
-      }
+#MealChoices{
+  display: none;
+}
     
-  .survey{
-        display: none;
-        }
-      
-
-/*
-.nav1{
-  position: absolute;
-  bottom: 50px;
-  left: 750px;
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
-  height: 50px;
-  font-size: 30px;
+.survey{
+  display: none;
 }
 
-.nav2{
-  position: absolute;
-  bottom: 50px;
-  left: 550px;
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
-  height: 50px;
-  font-size: 30px;
-}
-*/
 .sidenav{
   width: 400px;
   height: 500px;
 }
 
+#GREEN{
+  margin-inline-start: 370px;
+  margin-top: 20px;
+  margin-inline-end: 50px;
+  margin-block-end: 1em;
+  border-radius: 10px;
+}
+
+#collage{
+  margin-inline-start: 720px;
+  display: block;
+  margin-top: -27.4em;
+  border-radius: 10px;
+}
 
 h9{
   display: block;
-  color: black;
-  position: absolute;
-  left: 50px;
+  color: #76B947;
   font-size: 40px;
-  top: 300px;
+  margin-inline-start: 450px;
+  margin-block-start: -10em;
+}
+
+#login-form{
+  margin-inline-start: 450px;
+  margin-block-start: 2em;
+  color: azure;
 }
 
 #SignOutLinkTop {
   display: none;
 }
-
-
-#login-form{
-  position: absolute;
-  top: 390px;
-  left: 150px;
-}
-/* Nav bar stuff 
-.navbar {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgb(179, 230, 245);
-  list-style: none;
-  padding: 1.5em;
-  border-radius: 12px;
-  border: 1px solid black;
-}
-
-.navbar a {
-  background-color: #FFFF8A;
-  padding: 1em;
-  border-radius: 12px;
-  border: 1px solid black;
-  text-decoration: none;
-}
-
-.nav li {
-  display: inline-block;
-  
-}*/
-
-/* Title stuff 
-#fruitSpread{
-  width: 50%;
-  height: 250px
-}*/
-
 
 /* Main content */
 .main-content {
@@ -331,351 +269,128 @@ h9{
   padding: 15px;
   box-sizing: border-box; /* This fits the content including padding */
   background-color: #98FB98;
-  
 }
+
 h3   {
   color: #000;
-  position: absolute;
   top: 350px;
   left: 190px;
 }
 
 .box2{
-  position: absolute;
   top: 700px;
 }
 
 h5   {
   color: #000;
-  position: absolute;
   left: 30px;
   font-size: 30px;
 }
 
 #iframe {
   border: none;
+  height: 420px;
  }
  
 .main-content .login .hidden{
   display: none;
 }
 
-.spin-wheel {
+.spin-wheel {           /* this stays abbsolute positioning for wheel to work */
   position: absolute;
   top:500px;
   width: 1500px;
   height: 37rem;
-
 }
 
-.wheelspinner {
+.wheelspinner {         /* this stays abbsolute positioning for wheel to work */
   position: absolute;
   width: 1500px;
-  height: 37rem;
+  height: 39rem;
 }
 
 #lunch-btn{
   border-radius: 20px;
   display: block;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   width: 100px;
   height: 50px;
-  
+  margin-block-start: 2.5em;
   cursor: pointer;
 }
+
 #breakfast-btn{
   border-radius: 20px;
   display: block;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   width: 100px;
   height: 50px;
-  
+  margin-inline-start: 1em;
+  margin-block-start: 2.5em;
   cursor: pointer;
 }
 
 #TOUCH {
+  font-size: 20px;
   position: absolute;
   left: 700px;
   top: 270px;
-  font-size: 20px;
 }
 
-#portal{
+#portal{          
+  font-size: 45px;
+  cursor: pointer;
   position: absolute;
   left: 690px;
   top: 300px;
-  font-size: 45px;
-  cursor: pointer;;
 }
 
 #dinner-btn{
   border-radius: 20px;
   display: block;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   width: 100px;
   height: 50px;
-
+  margin-block-start: 2.5em;
   cursor: pointer;
 }
 
 #btnSubmitSignUp{
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   width: 100px;
   height: 30px;
-  position: absolute;
-  top: 140px;
-  left: 220px;
   cursor: pointer;
 }
 
 #btnSubmitSignIn{
   border-radius: 10px;
-  background-color: #f1f1f1;
+  background-color: #76B947;
   width: 100px;
   height: 30px;
-  position: absolute;
-  top: 70px;
-  left: 200px;
   cursor: pointer;
 }
-
-#back{
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 50px;
-  height: 30px;
-  position: absolute;
-  top: 300px;
-}
-
-
-
-/*.recipeName {
-  position: absolute;
-  left: 490px;
-  top: 400px;
-  width: 200px;
-  display: inline-block;
-}*/
-
-/*.RepLink {
-  position: absolute;
-  left: 650px;
-  top: 400px;
-} */
-
 
 .recipeTimeOfDay {
   width: 100px;
 }
-
-
-
-
-/* h1{
-    color:ghostwhite;
-    position: absolute;
-    left: 600px;
-    top: 100px;
-    cursor: zoom-out;
-
-}
-
-body{
-    background-color:#FFD580; 
-}
-
-
-body {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .div--1 {
-    background-color: rgb(0, 132, 255);
-    width: -10px;
-    height: 250px;
-  }
-  .div--2 {
-    background-color: rgb(255, 136, 0);
-    position: absolute;
-    top: 380px;
-    left: 90px;
-    width: 1100px;
-    height: 10px;
-  
-  }
-  .div--3 {
-    background-color: rgb(255, 0, 242);   
-    position: absolute;
-    top: 880px;
-    left: 90px;
-    width: 1100px;
-  }
-  .navbar ul {
-    display: flex;
-    justify-content: space-around;
-    background-color: rgb(179, 230, 245);
-    list-style: none;
-    padding: 1.5em;
-    border-radius: 12px;
-    border: 1px solid black;
-  }
-  .navbar ul li a {
-    background-color: yellow;
-    padding: 1em;
-    border-radius: 12px;
-    border: 1px solid black;
-    text-decoration: none;
-  }
-  .navbar ul li:hover {
-    background-color: orangered;
-    cursor: pointer;
-  }
-  .navbar {
-    width: 90%;
-  }
-  section {
-    width: 75%;
-  }
-  .div {
-    margin: 1em;
-    border-radius: 12px;
-    border: 1px solid black;
-    font-size: 5em;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  #button {
-    text-align: center;
-
-    
-    position: absolute;
-    left: 600px;
-    top: 1550px;
-   
-  }
-
-#dinner{
-  color:aqua;
-  font-size: 15px;
-}
-
-
-
-#breakfast-btn{
-  position: absolute;
-  left: 400px;
-  top: 1450px;
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
-  height: 50px;
-}
-
-#lunch-btn{
-  position: absolute;
-  left: 650px;
-  top: 1450px;
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
-  height: 50px;
-}
-
-#dinner-btn{
-  position: absolute;
-  left: 900px;
-  top: 1450px;
-  border-radius: 10px;
-  background-color: #FFFF8A;
-  width: 120px;
-  height: 50px;
-}
- */
-
 
 #back{
   text-align: right;
 }
 
 .survey {
-  position: absolute;
   top: 00px;
   left: 750px;
 }
 
-
-
- /*Tooltip container */
-.tooltip {
-  display: inline-block;
-  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  position: absolute;
-  top: 390px;
-  left: 390px;
-}
-
-  /*Tooltip text */
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-
-  /*Position the tooltip text */
-  position: absolute;
-  top: 50px;
-  left: 50px;
-
-  
-
-    /*Fade in tooltip */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
- /*Tooltip arrow */
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-  /*Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-  position: absolute;
-  top: -50px;
-  left: 10px;
-}
-
 .signInHelp {
-  position: absolute;
   left: 250px;
   top: 10px;
   width: 300px;
 }
 
 .signUpHelp {
-  position: absolute;
   left: 250px;
   top: 10px;
   width: 300px;
@@ -711,7 +426,7 @@ body {
   color: #f1f1f1;
 }
 
-.sidenav .closebtn {
+.sidenav .closebtn {      /* this stays abbsolute positioning for sideNav to work */
   position: absolute;
   top: 0;
   right: 25px;
@@ -729,22 +444,21 @@ body {
   }
 }
 
-
 #styleNAV{
   size: 200px;
 }
 
-#SpinTitle{
+#SpinTitle{         /* this stays abbsolute positioning for wheel to work */
   position: absolute;
-  bottom: 700px;
-  left: 50px;
+  top: -200;
+  left: 20px;
   color: #185a37;
   font-size: 50px;
 }
 
-#wheeliframe {
+#wheeliframe {      /* this stays abbsolute positioning for wheel to work */
   position: absolute;
   right: 550px;
-  bottom: 100px;
+  bottom: 200px;
 }
 

@@ -12,28 +12,34 @@
 	height: 100vh;
 	overflow: hidden;
 	background-size: cover;
-	background-color:#E2F0CB;
+	background-color:#94C973;
+	position: absolute;
+    right: -300px;
+	top: -5px;
+	border-radius: 10px;
   }
   
 
   .mainbox{
 	position: absolute;
-	width: 500px;
-	height: 500px;
-
-
+	width: 400px;
+	height: 400px;
+	position: absolute;
+  	right: 550px;
+	top: 20px;
 
   }
   .mainbox:before{
 	position: absolute;
 	content: '';
-	width: 32px;
-	height: 32px;
+	width: 12px;
+	height: 12px;
 	background: url('https://learndesigntutorial.com/wp-content/uploads/2021/03/arrow-left.png') no-repeat;
-	background-size: 32px;
+	background-size: 12px;
 	right: -30px;
 	top: 50%;
 	transform: translateY(-50%);
+	border-radius: 10px;
   }
   .box{
 	width: 100%;
@@ -53,7 +59,7 @@
   
   .span1{
 	clip-path: polygon(0 92%, 100% 50%, 0 8%);
-	top: 120px;
+	top: 96px;
 	left: 0;
 	position: absolute;
 	background-color: #c9f1c9;
@@ -61,7 +67,7 @@
   }
   .span2{
 	clip-path: polygon(100% 92%, 0 50%, 100% 8%);
-	top: 120px;
+	top: 96px;
 	right: 0;
 	background-color: #e4f8e4;
 	text-align: right;
@@ -69,13 +75,13 @@
   .span3{
 	clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
 	bottom: 0;
-	left: 120px;
+	left: 96px;
 	background-color: #bbeebb;
   }
   .span4{
 	clip-path: polygon(50% 100%, 92% 0, 8% 0);
 	top: 0;
-	left: 120px;
+	left: 96px;
 	background-color: #d6f5d6;
   }
   

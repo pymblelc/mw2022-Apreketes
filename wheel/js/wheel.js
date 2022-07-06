@@ -9,6 +9,8 @@ const segments = [
 	"Running"
 ];
 
+const jsConfetti = new JSConfetti();
+
 function myfunction() {
 	var x = 1024;
 	var y = 9999;
@@ -43,6 +45,7 @@ function myfunction() {
             / (360 / segments.length)
         ) % segments.length;
 
+		jsConfetti.addConfetti();
 		alert(`You got ${segments[result]}!`); //'segments[result]' IS THE RESULT FROM THE WHEEL
 	}, 5000);
 

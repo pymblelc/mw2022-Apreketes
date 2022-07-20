@@ -42,7 +42,7 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
 
 
 
-//
+// function to submit a user 
 function submitUser(user, userUrl, apikey) {
     var settings = {
         "async": true,
@@ -57,7 +57,7 @@ function submitUser(user, userUrl, apikey) {
         "processData": false,
         "data": JSON.stringify(user)
     }
-    
+    //function for sign in 
     $.ajax(settings).done(function (response) {
         console.log('User successfully added');
         console.log(response);
@@ -139,9 +139,6 @@ function logUserIn(url, apikey, username, password){
 }
 
 
-
-
-
 // User makes a profile, and then the sign up hides when they press submit
 $('#btnSubmitSignUp').click(function(){
     console.log('signin up');
@@ -159,9 +156,7 @@ $('#btnSubmitSignUp').click(function(){
     submitUser(userProfile, userUrl, apikey) 
     console.log(userProfile);
     return;
-
     submitUser(userProfile, userUrl, apikey);
-
 })
 
 //This submit button only logs in user's if user's values are entered correctly
@@ -170,28 +165,21 @@ $('#btnSubmitSignIn').click(function(){
     var username = $('#usernameSignIn').val()
     var password = $('#password').val()
     logUserIn(userUrl, apikey, username, password);
-
-   
 })
 
 //When dinner button is clicked, the user's diet dinner options are showed 
 $('#dinner-btn').click(function(){
-    
     getUserPreference("dinner", userUrl, apikey, localStorage.getItem('user'))
-
 })
 
 //When breakfast button is clicked, the user's diet breakfast options are showed 
 $('#breakfast-btn').click(function(){
-    
     getUserPreference("breakfast", userUrl, apikey, localStorage.getItem('user'))
 })
 
 //When Lunch button is clicked, the user's diet lunch options are showed 
 $('#lunch-btn').click(function(){
-   
     getUserPreference("lunch", userUrl, apikey, localStorage.getItem('user'))
-
 })
 
 //Back button for Meal Buttons
@@ -243,22 +231,21 @@ $('#SignUpLink').click(function(){
     closeNav();
 })
 
-//Side Nav Bar 
+//Side Nav Bar open
 function openNav() {
     document.getElementById("mySidenav").style.width = "450px";
   }
-  
+
+  //Side Nav Bar close
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
 
-
-
-//TODO: add userName at top of mealchoices 
+//userName at top of mealchoices 
 $("#username").text(localStorage.getItem("username"))
 
 
-//survey.js
+//all survey.js
 var apikey = '61a3fa6c34abfc7f972efbfd';
 var userUrl = 'https://apreketes-68e3.restdb.io/rest/accounts';
 
@@ -321,6 +308,7 @@ ul_3.addEventListener('click',function() {
     console.log(ul_3);
 });
 
+//access to portal
 end.addEventListener('click',function() {
     end.style.display = "none";
     MealChoices.style.display = "block";
@@ -329,19 +317,20 @@ end.addEventListener('click',function() {
 
 //Diet types clicked, are saved with profile in database
 $('#veganBtn').click(function(){
-
     saveDietType("vegan")
 })
 
+//Diet types - vegetarian
 $('#vegetarianBtn').click(function(){
-
     saveDietType("vegetarian")
 })
 
+//Diet types - gluten free
 $('#glutenBtn').click(function(){
     saveDietType("Gluten Free")
 })
 
+//Diet types - no requirements 
 $('#noRequirementsBtn').click(function(){
     saveDietType("No Requirements")
 })

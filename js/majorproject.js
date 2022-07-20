@@ -30,7 +30,8 @@ function getRecipes(mealType, userPreference, recipesUrl, apikey) {
                 var imgURL = mediaUrl + response[i].image[0] + "?s=t";
                 //need to use API key when requesting Image 
                 //currently throwing a 403 error in console
-                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName' >" + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\"> <img id='RECIPEID' src='recipee.png" + "'></a>" + "</div>";
+                var recipeItem = '<div class="recipe" id="' + response[i]._id + '">' + "<span class= 'recipeName'> You Got: " + response[i].recipename +"</span>" + "<a class= 'RepLink' href=" + response[i].url + " target=\"_blank\"> <img id='RECIPEID' src='recipee.png" + "'></a>" + "</div>";
+                $("#RecipeItems").empty();
                 $("#RecipeItems").append(recipeItem);
             }
 
@@ -71,6 +72,7 @@ function submitUser(user, userUrl, apikey) {
             //$('#MealChoices').show();
             $('#SignIn').hide()
             $('#SignInLinkTop').hide()
+            $('#SignUpLinkTop').hide()
         }
     });
 }
@@ -123,6 +125,7 @@ function logUserIn(url, apikey, username, password){
             $('#MealChoices').show();
             $('#SignIn').hide()
             $('#SignInLinkTop').hide()
+            $('#SignUpLinkTop').hide()
             $('#signInError').hide()
             $("#SignOutLinkTop").show();
 
@@ -138,21 +141,6 @@ function logUserIn(url, apikey, username, password){
 
 
 
-//TODO: add this back button 
-
-/*document.getElementById("back").classList.add("hidden");
-document.getElementById("recipes").classList.add("hidden");*/
-
-/*
-document.getElementById('nav--bar').addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = e.target;
-    if (target.classList.contains('link--a')) {
-        const id = target.getAttribute('href').slice(1);
-        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-});
-*/
 
 // User makes a profile, and then the sign up hides when they press submit
 $('#btnSubmitSignUp').click(function(){
@@ -214,7 +202,7 @@ $('#back').click(function(){
 
 })
 
-//Hide and Show for Sign In page
+//Hide and Show for Sign In page NAVBAR
 $('#SignInLink').click(function(){
     $('#SignIn').show();
     $('#Home').hide();
@@ -235,7 +223,17 @@ $('#SignInLinkTop').click(function(){
     closeNav();
 })
 
-//Hide and Show for SignUp page  
+//Hide and Show for Sign Up page 
+$('#SignUpLinkTop').click(function(){
+    $('#SignIn').hide();
+    $('#Home').hide();
+    $('#SignUp').show();
+    $('#MealChoices').hide();
+    $('#survey').hide();
+    closeNav();
+})
+
+//Hide and Show for SignUp page NAVBAR
 $('#SignUpLink').click(function(){
     $('#SignUp').show();
     $('#Home').hide();

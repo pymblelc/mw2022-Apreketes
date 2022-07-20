@@ -65,14 +65,14 @@ text-align: center;
   display: none;
 }
 
-.recipeName{
+.recipeName{            /* needed abbsolute positioning */
   font-size: 20px;
   position: absolute;
   top: 250px;
   left: 1150px;
 }
 
-#RECIPEID{
+#RECIPEID{            /* needed abbsolute positioning */
   position: absolute;
   top: 300px;
   left: 1150px;
@@ -93,10 +93,25 @@ header {
   border-radius: 10px;
 }
 
+#MEALBUTTON{          /* approved abbsolute positioning */
+  position: absolute;
+
+  top: 250px;
+  color: #76B947;
+}
+
 #SignInLinkTop {    /* approved abbsolute positioning */
   position: absolute;
   right: 40px;
   top: 40px;
+  font-weight: bolder;
+  font-size: 25px;
+} 
+
+#SignUpLinkTop {    /* approved abbsolute positioning */
+  position: absolute;
+  right: 30px;
+  top: 70px;
   font-weight: bolder;
   font-size: 25px;
 } 
@@ -456,11 +471,12 @@ body {
 
 #SpinTitle{         /* this stays abbsolute positioning for wheel to work */
   position: absolute;
-  top: -200;
-  left: 20px;
   color: #185a37;
-  font-size: 50px;
+  left: 10px;
+  top:-20px;
+  font-size: 40px;
 }
+
 
 #wheeliframe {      /* this stays abbsolute positioning for wheel to work */
   position: absolute;

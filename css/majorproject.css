@@ -1,0 +1,485 @@
+body {                    /* main css body */
+  margin: 0;
+  padding: 0;
+  background-color:#E2F0CB;
+}
+
+h1{                      /* main header title */
+  display: block;
+  color: #185a37;
+  left: 550px;
+}
+
+.mealButtons {          /* main meal buttons */
+  display: flex;
+}
+
+.mealButton {           /* main meal buttons */
+width: 300px;
+height: 300px;
+text-align: center;
+}
+
+#REcImg{                /* main page image */
+  top: 450px;
+  left: 150px;
+  border-radius: 10px;
+}
+
+#ETitle {               /* image text  */
+  top: 550px;
+  left: 450px;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-block-start: 4em;
+}
+    
+#EStory{                /* image text  */
+  top: 550px;
+  left: 450px;
+  text-align: center;
+  margin-block-start: 0em;
+}
+
+#EStory2{                /* image text  */
+  top: 570px;
+  left: 450px;
+  text-align: center;
+  margin-block-start: 0em;
+}
+
+#profileData{          /* approved abbsolute positioning */
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 175px;
+  height: 100px;
+  border-radius: 20px;
+}
+#signInError{            /* visual error for user when details wrong  */
+  width: 500px;
+  font-size: 16px;
+  color: red;
+  display: none;
+}
+
+.recipeName{            /* needed abbsolute positioning */
+  font-size: 20px;
+  position: absolute;
+  top: 250px;
+  left: 1150px;
+}
+
+#RECIPEID{              /* needed abbsolute positioning */
+  position: absolute;
+  top: 300px;
+  left: 1150px;
+  width: 100px;
+  height: 100px;
+}
+
+header {               /* main header title */
+  display: inline;
+  color: #185a37;
+  font-size: 100px;
+}
+
+#usernameSignIn{        /*  Sign In username button */
+  border-radius: 10px;
+}
+#password{              /*  Sign In password button */
+  border-radius: 10px;
+}
+
+#MEALBUTTON{          /* approved abbsolute positioning */
+  position: absolute;
+  top: 250px;
+  color: #76B947;
+}
+
+#SignInLinkTop {    /* approved abbsolute positioning */
+  position: absolute;
+  right: 40px;
+  top: 40px;
+  font-weight: bolder;
+  font-size: 25px;
+} 
+
+#SignUpLinkTop {    /* approved abbsolute positioning */
+  position: absolute;
+  right: 30px;
+  top: 70px;
+  font-weight: bolder;
+  font-size: 25px;
+} 
+
+#userName{          /* approved abbsolute positioning */
+  position: absolute;
+  right: 45px;
+  top: 30px;
+  color: #76B947
+}
+
+#dietType{          /* approved abbsolute positioning */
+  position: absolute;
+  right: 55px;
+  top: 50px;
+  color: #76B947
+}
+
+#usernameSignIn{      /*  Sign In username box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+#password{            /*  Sign In password box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#firstName{           /*  Sign Up firstname box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#lastName{            /*  Sign Up lastname box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#DOB{                 /*  Sign Up DOB box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#email{               /*  Sign Up email box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#usernameSignUp{      /*  Sign UP username box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#passwordSignUp{     /*  Sign Up password box */
+  border-radius: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  top: 70px;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 200px; 
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-block-start: -9em;
+  border-radius: 3px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#userInfo{                /* approved abbsolute positioning */
+  position: absolute;
+  top: 40px;
+  right: 0px;
+  width: 100px;
+  height: 100px;
+}
+
+#Home{                    /*  home page */
+  min-height:300px;
+  display: block;
+  margin-top: 200px;
+}
+
+#SignUp{                   /*  Sign Up page */
+  display: none;
+}
+  
+#SignIn{                    /*  Sign In page */
+  display: none;
+}
+  
+#MealChoices{                /*  meal choices page */
+  display: none;
+}
+    
+.survey{                     /*  survey page */
+  display: none;
+}
+
+.sidenav{                     /*  Nav Bar */
+  width: 400px;
+  height: 500px;
+}
+
+#GREEN{                      /*  For Sign Up/Sign In page */
+  margin-inline-start: 370px;
+  margin-top: 20px;
+  margin-inline-end: 50px;
+  margin-block-end: 1em;
+  border-radius: 10px;
+}
+
+#collage{                     /*  For Sign Up/Sign In page */
+  margin-inline-start: 720px;
+  display: block;
+  margin-top: -27.4em;
+  border-radius: 10px;
+}
+
+h9{                           /*  For Sign Up/Sign In page */
+  display: block;
+  color: #76B947;
+  font-size: 40px;
+  margin-inline-start: 450px;
+  margin-block-start: -10em;
+}
+
+#login-form{                  /*  For Sign Up/Sign In page */
+  margin-inline-start: 450px;
+  margin-block-start: 2em;
+  color: azure;
+}
+
+#SignOutLinkTop {           /*  For Sign Up/Sign In TOP LINK  */
+  display: none;
+}
+
+/* Main content */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  height: 30rem;
+}
+
+.main-content > div {
+  height: 100%;
+  width: 50%;
+}
+
+.main-content .login {
+  /*display: flex;*/
+  padding: 15px;
+  box-sizing: border-box; /* This fits the content including padding */
+  background-color: #98FB98;
+}
+
+h3   {                 /*  For Survey */
+  color: #000;
+  top: 350px;
+  left: 190px;
+}
+
+.box2{               /*  For Survey */
+  top: 700px;
+}
+
+h5   {                /*  For Survey */
+  color: #000;
+  left: 30px;
+  font-size: 30px;
+}
+
+#iframe {            /*  For Wheel */
+  border: none;
+  height: 420px;
+ }
+ 
+.main-content .login .hidden{
+  display: none;
+}
+
+.spin-wheel {           /* this stays abbsolute positioning for wheel to work */
+  position: absolute;
+  top:500px;
+  width: 1500px;
+  height: 37rem;
+}
+
+.wheelspinner {         /* this stays abbsolute positioning for wheel to work */
+  position: absolute;
+  width: 1500px;
+  height: 39rem;
+}
+
+#lunch-btn{                   /*  lunch button */
+  border-radius: 20px;
+  display: block;
+  background-color: #76B947;
+  width: 100px;
+  height: 50px;
+  margin-block-start: 2.5em;
+  cursor: pointer;
+}
+
+#breakfast-btn{                /*  breakfast button */
+  border-radius: 20px;
+  display: block;
+  background-color: #76B947;
+  width: 100px;
+  height: 50px;
+  margin-inline-start: 1em;
+  margin-block-start: 2.5em;
+  cursor: pointer;
+}
+
+#TOUCH {                       /*  For Survey */
+  font-size: 20px;
+  position: absolute;
+  left: 700px;
+  top: 270px;
+}
+
+#portal{                       /*  For Survey */
+  font-size: 45px;
+  cursor: pointer;
+  position: absolute;
+  left: 690px;
+  top: 300px;
+}
+
+#dinner-btn{                  /*  dinner button */
+  border-radius: 20px;
+  display: block;
+  background-color: #76B947;
+  width: 100px;
+  height: 50px;
+  margin-block-start: 2.5em;
+  cursor: pointer;
+}
+
+#HELPME{                      /*  HELP PAGE for meal choices */
+  position: absolute;
+  right: 40px;
+  top: 70px;
+}
+
+#btnSubmitSignUp{              /*  Submit button for sign up  */
+  border-radius: 10px;
+  background-color: #76B947;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+#btnSubmitSignIn{               /*  Submit button for sign In  */
+  border-radius: 10px;
+  background-color: #76B947;
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.recipeTimeOfDay {           /*  For meal choices */
+  width: 100px;
+}
+
+#back{                       /*  For meal choices */
+  text-align: right;
+}
+
+.survey {                       /*  For Survey */
+  top: 00px;
+  left: 750px;
+}
+
+.signInHelp {                   /*  HELP PAGE for sign in */
+  left: 250px;
+  top: 10px;
+  width: 300px;
+}
+
+.signUpHelp {                  /*  HELP PAGE for sign UP */
+  left: 250px;
+  top: 10px;
+  width: 300px;
+}
+
+body {                        /*  main body font */
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {                  /*  side nav  */
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {               /*  side nav  */
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {               /*  side nav  */
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {      /* this stays abbsolute positioning for sideNav to work */
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {               /*  side nav  */
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {               /*  side nav  */
+    font-size: 18px;
+  }
+}
+
+#styleNAV{               /*  side nav  */
+  size: 200px;
+}
+
+#SpinTitle{         /* this stays abbsolute positioning for wheel to work */
+  position: absolute;
+  color: #185a37;
+  left: 10px;
+  top:-20px;
+  font-size: 40px;
+}
+
+
+#wheeliframe {      /* this stays abbsolute positioning for wheel to work */
+  position: absolute;
+  right: 550px;
+  bottom: 200px;
+}
+

@@ -1,0 +1,254 @@
+
+a {
+  text-decoration: none;
+  color: #18A558;
+  text-decoration: underline; 
+  
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+
+header p {
+  font-size: 16px;
+}
+
+#InTouch{
+  position: absolute;
+  top: 260px;
+  left: 650px;
+}
+
+h3 {
+  position: absolute;
+  top: 260px;
+  left: 600px;
+  margin: 8px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+#end {
+  position: absolute;
+  top: 20px;
+  left: 300px;
+
+  width: 80%;
+  margin: 35% auto;
+  border-radius: 3px;
+  box-shadow: 1px 1px 7px rgb(0, 0, 0, 0.4);
+}
+ h1 {
+  position: absolute;
+  top: 200px;
+  left: 650px;
+  margin: 5px;
+}
+
+#end p {
+  position: absolute;
+  top: 100px;
+  left: 650px;
+  padding: 10px;
+}
+
+#end a {
+  position: absolute;
+  top: 560px;
+  left: 650px;
+  display: inline-block;
+  margin-top: 10px;
+  padding: 50px;
+  border-radius: 4px;
+  background: rgb(61, 61, 61);
+
+  outline: none;
+}
+
+#end a:hover {
+  position: absolute;
+  top: 560px;
+  left: 650px;
+  box-shadow: 1px 1px 7px rgb(0, 0, 0, 0.404);
+  transition: 0.3;
+}
+
+
+
+/*Display change properties */
+
+.q1 {
+  display: block;
+}
+
+.q2{
+  display: none;
+}
+
+.q3{
+  display: none;
+}
+
+.end {
+  display: none;
+}
+
+#veganBtn {
+  position: absolute;
+  top: 320px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+  
+}
+
+#vegetarianBtn {
+  position: absolute;
+  top: 360px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#glutenBtn {
+  position: absolute;
+  top: 400px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#noRequirementsBtn {
+  position: absolute;
+  top: 440px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#JustStarted {
+  position: absolute;
+  top: 320px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#month1 {
+  position: absolute;
+  top: 360px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#month3 {
+  position: absolute;
+  top: 400px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#month6 {
+  position: absolute;
+  top: 440px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#findnewrecipes {
+  position: absolute;
+  top: 320px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#eduPurp {
+  position: absolute;
+  top: 360px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#adviceHelp {
+  position: absolute;
+  top: 400px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+#somethingNew {
+  position: absolute;
+  top: 440px;
+  left: 700px;
+  border-radius: 10px;
+  background-color: #76B947;
+  background-repeat:no-repeat;
+  border: none;
+  color: black;
+  font-size: 17px;
+  cursor: pointer;
+}
